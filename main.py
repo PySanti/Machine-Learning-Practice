@@ -11,7 +11,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X_data.copy(), Y_data.copy()
 
 
 print("Random forest \n")
-alg = RandomForestClassifier(n_estimators=400,min_samples_split=300)
+alg = RandomForestClassifier(n_estimators=20,min_samples_split=300)
 alg.fit(X_train, Y_train)
 precision(Y_train, alg.predict(X_train), label="train")
 precision(Y_test, alg.predict(X_test), label="test")
