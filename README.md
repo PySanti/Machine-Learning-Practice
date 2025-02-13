@@ -37,3 +37,17 @@ Once the basic preprocessing process was finished, I made a study of the possibl
 ## Correlation
 
 In addition to the above, I made a study of the feature-feature and feature-target correlations, which showed a very low influence of the features native-country, occupation, workclass, etc. on the target. In spite of the above, the most convenient is to leave these classes since the difference in training time is minimal and it generates better results to leave them.
+
+
+# Training
+
+After going through the preprocessing stage, I started to do some tests with classification algorithms, the first ones I tried were **Logistic Regression** and **Random Forest**.
+
+After doing a few tests, I reached an accuracy of **90% f1 score for Random Forest** and **86% for Logistic Regression**.
+
+In this process, I learned the concept of hyperparameter optimization through Grid Search and Randomized Search.  I made a program to search for the most optimal parameters for the logistic regression algorithm, and after 3 hours (!!!) I arrived at the following result.
+
+{'C': 10, 'max_iter': 500, 'penalty': 'l1', 'solver': 'liblinear', 'tol': 0.0001}
+
+For which the algorithm also generates 86% accuracy. Now the plan will be to create a program that will search for the most optimal hyperparameters for SVC and Random Forest and then save the models to disk through the joblib library.
+
