@@ -13,5 +13,4 @@ def load_data():
 
     df = df.map(lambda x: x.strip() if isinstance(x, str) else x)
     df.replace("?", np.nan, inplace=True)
-    df = df.drop(["occupation", "education", "native-country","marital-status", "workclass"], axis=1)
     return [df.drop("income", axis=1), df["income"].map({"<=50K" : 0, ">50K" : 1})] 
