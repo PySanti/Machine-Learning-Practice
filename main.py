@@ -12,6 +12,7 @@ COMBINATIONS_N = 250
 [X_data, Y_data] = basic_preprocess(*load_data())
 X_train, X_test, Y_train, Y_test = train_test_split(X_data, Y_data, test_size=0.25, shuffle=True, random_state=42)
 
+<<<<<<< HEAD
 
 param_grid = {  
     'n_estimators': [10, 50, 100, 200, 500],  # Número de árboles en el bosque  
@@ -39,6 +40,11 @@ print("Random forest entrenado !!!")
 
 
 
+=======
+rf_model = joblib.load("./models/random_forest.joblib")
+
+print(rf_model.get_params())
+>>>>>>> dc9b0c8 (Modificacion de readme)
 
 param_dist = {  
     'C': np.logspace(-3, 3, 7),                 # Regularización (C) en una escala logarítmica  

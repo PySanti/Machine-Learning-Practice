@@ -81,3 +81,10 @@ The conclusion is that the best algorithm for this specific problem is Random Fo
 It should be noted that in this specific problem no preprocessing solutions such as feature extraction or feature selection were applied. 
 
 Blessings.
+
+# Update
+
+I will save the most optimal **Random Forest params** here as i could not upload the models on github.
+
+{'bootstrap': False, 'ccp_alpha': 0.0, 'class_weight': None, 'criterion': 'entropy', 'max_depth': 40, 'max_features': 'sqrt', 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 2, 'min_samples_split': 10, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 500, 'n_jobs': None, 'oob_score': False, 'random_state': None, 'verbose': 0, 'warm_start': False}
+
