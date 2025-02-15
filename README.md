@@ -43,11 +43,41 @@ In addition to the above, I made a study of the feature-feature and feature-targ
 
 After going through the preprocessing stage, I started to do some tests with classification algorithms, the first ones I tried were **Logistic Regression** and **Random Forest**.
 
-After doing a few tests, I reached an accuracy of **90% f1 score for Random Forest** and **87% for Logistic Regression**.
+After doing a few tests, I reached an accuracy of **90% f1 score for Random Forest** and **86% for Logistic Regression**.
 
 In this process, I learned the concept of hyperparameter optimization through Grid Search and Randomized Search.  I made a program to search for the most optimal parameters for the logistic regression algorithm, and after 3 hours (!!!) I arrived at the following result.
 
 {'C': 10, 'max_iter': 500, 'penalty': 'l1', 'solver': 'liblinear', 'tol': 0.0001}
 
-For which the algorithm also generates 87% accuracy. Now the plan will be to create a program that will search for the most optimal hyperparameters for SVC and Random Forest and then save the models to disk through the joblib library.
+For which the algorithm also generates 86% accuracy. Now the plan will be to create a program that will search for the most optimal hyperparameters for SVC and Random Forest and then save the models to disk through the joblib library.
 
+# Day 3
+
+After leaving the PC with the program running for about 20 hours, I realized that it would take about 300 hours more to find the most optimal model for SVC, so I only ended up finding the most optimal model for Random Forest and Logistic Regression. These are the final results.
+
+```
+Logistic Regression Study 
+
+~~~~~~~ Train Set
+Positive accuracy : 0.8724723060520087
+Negative accuracy : 0.8742672866891158
+~~~~~~~ Test Set
+Positive accuracy : 0.8751088850174216
+Negative accuracy : 0.8779007877368533
+
+
+Random Forest Study 
+
+~~~~~~~ Train Set
+Positive accuracy : 0.9376570495772272
+Negative accuracy : 0.940308729782414
+~~~~~~~ Test Set
+Positive accuracy : 0.907832825906449
+Negative accuracy : 0.912786129589859
+```
+
+The conclusion is that the best algorithm for this specific problem is Random Forest, even though it is generating some overfitting.
+
+It should be noted that in this specific problem no preprocessing solutions such as feature extraction or feature selection were applied. 
+
+Blessings.
